@@ -29,11 +29,12 @@ header p {
   height: 20em;
   border-radius: 4px;
   margin: 1.2em auto;
+  display: table;
 }
 #flashcard h2 {
   color: #fff;
-  line-height: 12.8em;
-  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
 }
 [type="button"] {
   color: #3599db;
