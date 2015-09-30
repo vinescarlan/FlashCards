@@ -25,7 +25,14 @@ function createNum() {
 	while (answeredQA.indexOf(questionNum) !== -1) {
 		// If all QAs set is finished, let user restart the quiz
 		if (errorTimes > 10) {
+			// Change bgcolor of card to green
+			card.style.background = "#0ea";
+			// Display "finished" message
+			question.innerHTML = "Congratulations! You've finished this test!" + 
+			"<br/>If you have wrong answers, please click RESTART.";
+			// Change value of revealBtn to "RESTART"
 			revealBtn.value = "RESTART";
+			// Prevent execution of any code
 			return false;
 		}
 		// Generate random num
