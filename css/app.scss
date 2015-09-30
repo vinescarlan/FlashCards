@@ -11,6 +11,11 @@ body {
   text-align: center;
   background: $color-white;
 }
+a {
+  color: $color-blue;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
 h1 {
   font-weight: $headings-font-weight;
   margin: 0 auto;
