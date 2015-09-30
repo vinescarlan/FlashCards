@@ -24,7 +24,6 @@ function createNum() {
 	// Recursively create random questionNum so that last QA set will not be repeated
 	while (answeredQA.indexOf(questionNum) !== -1) {
 		if (errorTimes > 10) {
-			alert('finish');
 			return false;
 		}
 		questionNum = Math.floor(Math.random() * 3);
@@ -39,12 +38,12 @@ createNum();
 var revealBtn = document.getElementById('reveal-answer');
 
 function revealAns() {
-	question.innerHTML = questions[questionNum].answer;
-	revealBtn.value = "NEXT";
-
 	if (this.value == "NEXT") {
 		createNum();
 		revealBtn.value = "REVEAL";
+	} else {
+		question.innerHTML = questions[questionNum].answer;
+		revealBtn.value = "NEXT";
 	}
 }
 
