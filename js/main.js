@@ -15,7 +15,7 @@ var questions = [
 
 var question = document.getElementById('question');
 
-var questionNum = 0;
+var questionNum = 0, answeredQA = [];
 
 // Generate random number to display random QA set
 function createNum() {
