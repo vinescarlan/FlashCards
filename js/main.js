@@ -37,4 +37,9 @@ function revealAns() {
 	question.innerHTML = questions[questionNum].answer;
 }
 
+function nextSet() {
+	createNum();
+	question.innerHTML = questions[questionNum].question;
+}
+
 revealBtn.onclick = revealAns;
