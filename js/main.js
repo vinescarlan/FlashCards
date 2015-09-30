@@ -51,11 +51,15 @@ function revealAns() {
 		// Reload the page
 		location.reload();
 	} else if (this.value == "NEXT") {
+		// Change back the bgcolor of flashcard to red 
+		card.style.background = "#ff4553";
 		revealBtn.value = "REVEAL";
 		// Display next set of QA
 		createNum();
 	} else {
-		// If value is "REVEAL", display the answer
+		// If value is "REVEAL", change flashcard bgcolor to cyan
+		card.style.background = "#0cc";
+		// And display the answer
 		question.innerHTML = questions[questionNum].answer;
 		revealBtn.value = "NEXT";
 	}
