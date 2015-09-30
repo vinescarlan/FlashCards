@@ -1,0 +1,13 @@
+// Modules and Variables
+@import "partials/base";
+
+// Partials
+@import "partials/typography";
+
+body {
+  font: 100% $font-primary-stack;
+  color: $color-black;
+}
+h1 {
+  font-weight: $headings-font-weight;
+}
