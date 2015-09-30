@@ -29,7 +29,7 @@ function createNum() {
 			return false;
 		}
 		// Generate random num
-		questionNum = Math.floor(Math.random() * 3);
+		questionNum = Math.floor(Math.random() * questions.length);
 		errorTimes++;
 	}
 	// Fade effect
