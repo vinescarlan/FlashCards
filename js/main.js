@@ -17,9 +17,12 @@ var question = document.getElementById('question');
 
 var questionNum = 0;
 
+// Generate random number to display random QA set
 function createNum() {
   questionNum = Math.floor(Math.random() * 3);
 }
 
 createNum();
 question.innerHTML = questions[questionNum].question;
+
+
