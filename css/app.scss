@@ -3,6 +3,7 @@
 
 // Partials
 @import "partials/typography";
+@import "partials/buttons";
 
 body {
   color: $color-black;
@@ -35,4 +36,11 @@ header {
     line-height: 12.8em;
     margin: 0;
   }
+}
+[type="button"] {
+  @include button();
+}
+[type="button"]:hover {
+  color: $color-white;
+  background: $color-blue;
 }
