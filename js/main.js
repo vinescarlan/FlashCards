@@ -15,15 +15,21 @@ var questions = [
 
 var question = document.getElementById('question');
 
-var questionNum = 0, answeredQA = [];
+var questionNum = 0,
+	answeredQA = [];
 
 // Generate random number to display random QA set
 function createNum() {
 	questionNum = Math.floor(Math.random() * 3);
+	// Recursively create random questionNum so that last QA set will not be repeated
+	if (answeredQA.indexOf(questionNum) !== -1) {
+		createNum();
+	}
+	question.innerHTML = questions[questionNum].question;
+	answeredQA.push(questionNum);
 }
 
 createNum();
-question.innerHTML = questions[questionNum].question;
 
 var revealBtn = document.getElementById('reveal-answer');
 
@@ -32,4 +38,3 @@ function revealAns() {
 }
 
 revealBtn.onclick = revealAns;
-
