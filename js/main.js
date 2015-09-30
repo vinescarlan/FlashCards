@@ -38,8 +38,6 @@ function createNum() {
 	answeredQA.push(questionNum);
 }
 
-createNum();
-
 var revealBtn = document.getElementById('reveal-answer');
 
 function revealAns() {
@@ -55,3 +53,5 @@ function revealAns() {
 }
 
 revealBtn.onclick = revealAns;
+
+window.onload = createNum;
