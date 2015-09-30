@@ -38,6 +38,7 @@ header {
   border-radius: $border-radius;
   margin: 1.2em auto;
   display: table;
+  transition: all 0.3s ease-out;
   h2 {
     color: $color-white;
     display: table-cell;

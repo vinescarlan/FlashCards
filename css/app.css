@@ -33,6 +33,7 @@ header p {
   border-radius: 4px;
   margin: 1.2em auto;
   display: table;
+  transition: all 0.3s ease-out;
 }
 #flashcard h2 {
   color: #fff;
