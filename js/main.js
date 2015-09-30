@@ -44,6 +44,7 @@ function createNum() {
 }
 
 var revealBtn = document.getElementById('reveal-answer');
+var card = document.getElementById('flashcard');
 
 function revealAns() {
 	if (this.value == "RESTART") {
