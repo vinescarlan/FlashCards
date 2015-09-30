@@ -40,9 +40,8 @@ header {
   display: table;
   h2 {
     color: $color-white;
-    line-height: 12.8em;
-    margin: 0;
     display: table-cell;
+    vertical-align: middle;
   }
 }
 [type="button"] {
