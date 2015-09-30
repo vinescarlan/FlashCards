@@ -42,6 +42,7 @@ header {
     color: $color-white;
     display: table-cell;
     vertical-align: middle;
+	transition: all 0.3s ease-out;
   }
 }
 [type="button"] {

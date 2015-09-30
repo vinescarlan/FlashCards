@@ -30,7 +30,11 @@ function createNum() {
 		questionNum = Math.floor(Math.random() * 3);
 		errorTimes++;
 	}
-	question.innerHTML = questions[questionNum].question;
+	question.style.opacity = 0;
+	setTimeout(function () {
+		question.innerHTML = questions[questionNum].question;
+		question.style.opacity = 1;
+	}, 500);
 	answeredQA.push(questionNum);
 }
 
