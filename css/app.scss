@@ -5,9 +5,20 @@
 @import "partials/typography";
 
 body {
-  font: 100% $font-primary-stack;
   color: $color-black;
+  font: 100% $font-primary-stack;
 }
 h1 {
   font-weight: $headings-font-weight;
+  margin: 0 auto;
+}
+header {
+  h1, p {
+    color: $color-primary;
+    text-align: center;
+    line-height: $font-line-height;
+  }
+  p {
+    margin: 0 auto;
+  }
 }
