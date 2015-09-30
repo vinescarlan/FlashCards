@@ -9,3 +9,4 @@ var questions = [
   }
 ];
 
+var question = document.getElementById('question');
