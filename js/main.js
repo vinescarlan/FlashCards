@@ -23,18 +23,23 @@ var questionNum = 0,
 function createNum() {
 	// Recursively create random questionNum so that last QA set will not be repeated
 	while (answeredQA.indexOf(questionNum) !== -1) {
+		// If all QAs set is finished, let user restart the quiz
 		if (errorTimes > 10) {
 			revealBtn.value = "RESTART";
 			return false;
 		}
+		// Generate random num
 		questionNum = Math.floor(Math.random() * 3);
 		errorTimes++;
 	}
+	// Fade effect
 	question.style.opacity = 0;
+	// Wait for 500ms before changing the question
 	setTimeout(function () {
 		question.innerHTML = questions[questionNum].question;
 		question.style.opacity = 1;
 	}, 500);
+	// Let this program know that the user already seen the question
 	answeredQA.push(questionNum);
 }
 
@@ -42,11 +47,14 @@ var revealBtn = document.getElementById('reveal-answer');
 
 function revealAns() {
 	if (this.value == "RESTART") {
+		// Reload the page
 		location.reload();
 	} else if (this.value == "NEXT") {
 		revealBtn.value = "REVEAL";
+		// Display next set of QA
 		createNum();
 	} else {
+		// If value is "REVEAL", display the answer
 		question.innerHTML = questions[questionNum].answer;
 		revealBtn.value = "NEXT";
 	}
