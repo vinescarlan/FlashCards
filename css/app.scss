@@ -7,6 +7,7 @@
 body {
   color: $color-black;
   font: 100% $font-primary-stack;
+  text-align: center;
 }
 h1 {
   font-weight: $headings-font-weight;
@@ -15,13 +16,9 @@ h1 {
 header {
   h1, p {
     color: $color-primary;
-    text-align: center;
     line-height: $font-line-height;
   }
   p {
     margin: 0 auto;
   }
-}
-.page-content, footer {
-  text-align: center;
 }
