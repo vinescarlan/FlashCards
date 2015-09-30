@@ -16,15 +16,16 @@ h1 {
 }
 header {
   h1, p {
-    color: $color-primary;
+    color: lighten($color-red, 10%);
     line-height: $font-line-height;
+    text-shadow: 0px 1px 0px $color-black;
   }
   p {
     margin: 0 auto;
   }
 }
 #flashcard {
-  background: $color-primary;
+  background: $color-red;
   width: 20em;
   height: 20em;
   border-radius: $border-radius;
