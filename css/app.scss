@@ -22,3 +22,15 @@ header {
     margin: 0 auto;
   }
 }
+#flashcard {
+  background: $color-primary;
+  width: 20em;
+  height: 20em;
+  border-radius: $border-radius;
+  margin: 1.2em auto;
+  h2 {
+    color: $color-white;
+    line-height: 12.8em;
+    margin: 0;
+  }
+}
