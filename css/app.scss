@@ -37,10 +37,12 @@ header {
   height: 20em;
   border-radius: $border-radius;
   margin: 1.2em auto;
+  display: table;
   h2 {
     color: $color-white;
     line-height: 12.8em;
     margin: 0;
+    display: table-cell;
   }
 }
 [type="button"] {
