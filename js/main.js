@@ -10,3 +10,12 @@ var questions = [
 ];
 
 var question = document.getElementById('question');
+
+var questionNum = 0;
+
+function createNum() {
+  questionNum = Math.floor(Math.random() * 2);
+}
+
+createNum();
+question.innerHTML = questions[questionNum].question;
