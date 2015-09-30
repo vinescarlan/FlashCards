@@ -25,3 +25,11 @@ function createNum() {
 createNum();
 question.innerHTML = questions[questionNum].question;
 
+var revealBtn = document.getElementById('reveal-answer');
+
+function revealAns() {
+	question.innerHTML = questions[questionNum].answer;
+}
+
+revealBtn.onclick = revealAns;
+
