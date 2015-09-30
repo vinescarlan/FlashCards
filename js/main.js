@@ -36,6 +36,11 @@ var revealBtn = document.getElementById('reveal-answer');
 function revealAns() {
 	question.innerHTML = questions[questionNum].answer;
 	revealBtn.value = "NEXT";
+	
+	if (this.value == "NEXT") {
+		createNum();
+		revealBtn.value = "REVEAL";
+	}
 }
 
 function nextSet() {
