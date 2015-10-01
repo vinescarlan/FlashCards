@@ -4,7 +4,7 @@
 #### Technologies used: 
 - HTML5
 - CSS3
-- SASS
+- SASS / SCSS
 - Vanilla JavaScript
 - AJAX
 - JSON
