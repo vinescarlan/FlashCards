@@ -4,6 +4,7 @@ var xmlhttp = new XMLHttpRequest(),
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         questions = JSON.parse(xmlhttp.responseText);
+		createNum();
     }
 };
 
@@ -72,5 +73,3 @@ function revealAns() {
 }
 
 revealBtn.onclick = revealAns;
-
-window.onload = createNum;
