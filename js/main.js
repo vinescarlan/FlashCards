@@ -1,3 +1,15 @@
+var xmlhttp = new XMLHttpRequest(),
+	questions;
+
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        questions = JSON.parse(xmlhttp.responseText);
+    }
+};
+
+xmlhttp.open("GET", "js/questions.json", true);
+xmlhttp.send();
+
 var question = document.getElementById('question');
 
 var questionNum = 0,
