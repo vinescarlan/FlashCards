@@ -29,7 +29,7 @@
 		// If questionNum is FOUND in answeredQA
 		do {
 			// If all QAs set is finished, let user restart the quiz
-			if (errorTimes > 10) {
+			if (errorTimes > questions.length + 5) {
 				// Change bgcolor of card to green
 				card.style.background = "#0ea";
 				// Display "finished" message
