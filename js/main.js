@@ -19,6 +19,7 @@ var questionNum = 0,
 // Generate random number to display random QA set
 function createNum() {
 	// Recursively create random questionNum so that last QA set will not be repeated
+	// If questionNum is FOUND in answeredQA
 	while (answeredQA.indexOf(questionNum) !== -1) {
 		// If all QAs set is finished, let user restart the quiz
 		if (errorTimes > 10) {
