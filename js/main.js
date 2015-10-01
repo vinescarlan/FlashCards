@@ -20,7 +20,7 @@ var questionNum = 0,
 function createNum() {
 	// Recursively create random questionNum so that last QA set will not be repeated
 	// If questionNum is FOUND in answeredQA
-	while (answeredQA.indexOf(questionNum) !== -1) {
+	do {
 		// If all QAs set is finished, let user restart the quiz
 		if (errorTimes > 10) {
 			// Change bgcolor of card to green
@@ -36,7 +36,8 @@ function createNum() {
 		// Generate random num
 		questionNum = Math.floor(Math.random() * questions.length);
 		errorTimes++;
-	}
+	} while (answeredQA.indexOf(questionNum) !== -1);
+	
 	// Fade effect
 	question.style.opacity = 0;
 	// Wait for 500ms before changing the question
