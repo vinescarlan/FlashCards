@@ -1,0 +1,46 @@
+[
+	{
+		"question": "What does HTML stand for?",
+		"answer": "HyperText Markup Language"
+    },
+	{
+		"question": "What does CSS stand for?",
+		"answer": "Cascading Style Sheet"
+    },
+	{
+		"question": "Why the \"C\" in CSS, is called Cascading?",
+		"answer": "When CSS rules are duplicated, the rule to be use is chosen by <em>cascading</em> down from more general rules to the specific rule required"
+    },
+	{
+		"question": "What does JSON stand for?",
+		"answer": "JavaScript Object Notation"
+    },
+	{
+		"question": "Who is making the Web standards?",
+		"answer": "The World Wide Web Consortium"
+    },
+	{
+		"question": "What is the largest HTML element heading?",
+		"answer": "h1"
+    },
+	{
+		"question": "What is the HTML element for inserting a line break?",
+		"answer": "br"
+    },
+	{
+		"question": "Which HTML element do we put the JavaScript?",
+		"answer": "script"
+    },
+	{
+		"question": "How to change the content of HTML element with JavaScript?",
+		"answer": "Access its innerHTML property and set it equal to your desired content"
+    },
+	{
+		"question": "How to link external JavaScript files?",
+		"answer": "Add a src attribute in your script tag and set its value to the location of external JavaScript file"
+    },
+	{
+		"question": "Is JavaScript variables case-sensitive?",
+		"answer": "True"
+    }
+]
