@@ -1,4 +1,5 @@
 (function () {
+	// Get the file containing the Questions and Answers
 	var xmlhttp = new XMLHttpRequest(),
 		questions;
 
@@ -7,18 +8,20 @@
 			questions = JSON.parse(xmlhttp.responseText);
 			createNum();
 		} else if (xmlhttp.status == 404) {
+			// If file not found (404), display error message
 			document.body.innerHTML = "Error 404: File not found! Please refresh the window";
 		}
 	};
 
 	xmlhttp.open("GET", "js/questions.json", true);
 	xmlhttp.send();
-
+	
+	// Access the h2 elem inside flashcard
 	var question = document.getElementById('question');
 
-	var questionNum = 0,
-		answeredQA = [],
-		errorTimes = 0;
+	var questionNum = 0, // will store the random generated number
+		answeredQA = [], // will store the answered or display QA set
+		errorTimes = 0; // will store how many times questionNum is found in answeredQA
 
 	// Generate random number to display random QA set
 	function createNum() {
@@ -52,9 +55,9 @@
 		// Let this program know that the user already seen the question
 		answeredQA.push(questionNum);
 	}
-
-	var revealBtn = document.getElementById('reveal-answer');
-	var card = document.getElementById('flashcard');
+	
+	var revealBtn = document.getElementById('reveal-answer'); // Reveal Button
+	var card = document.getElementById('flashcard'); // Flashcard
 
 	function revealAns() {
 		if (this.value == "RESTART") {
@@ -71,6 +74,7 @@
 			card.style.background = "#0cc";
 			// And display the answer
 			question.innerHTML = questions[questionNum].answer;
+			// Change value to NEXT so user can display next set of QA
 			revealBtn.value = "NEXT";
 		}
 	}
