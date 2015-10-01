@@ -5,7 +5,9 @@ xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         questions = JSON.parse(xmlhttp.responseText);
 		createNum();
-    }
+    } else if (xmlhttp.status == 404) {
+		document.body.innerHTML = "Error 404: File not found! Please refresh the window";
+	}
 };
 
 xmlhttp.open("GET", "js/questions.json", true);
